@@ -10,7 +10,8 @@ def main():
     total_cost = 0
     taxis = [Taxi("Prius 1", 100), SilverServiceTaxi("Limo 1", 100, 2),
              SilverServiceTaxi("Hummer 1", 200, 4)]
-
+#Copy menu layout from assignment
+#Make sure everything is relating to floats not integers
     print("Let's drive!")
     print(MENU)
     menu_choice = input(">>> ").upper()
@@ -44,7 +45,7 @@ def Display_Taxis(taxis):
     for i, taxi in enumerate(taxis):
         print("{} - {}".format(i, str(taxi)))
 
-
+#Refer to prac_06 with cars and used_cars.
 def Start_Testing():
     """Run tests to show workings of Car and Taxi classes."""
     bus = Car("Datsun", 180)
@@ -56,25 +57,25 @@ def Start_Testing():
     print("odo = ", bus.odometer)
     print(bus)
 
-    # drive bus (input/loop is oblivious to fuel)
+    #I will need to loop bus
     distance = int(input("Drive how far? "))
     while distance > 0:
         travelled = bus.drive(distance)
         print("{} travelled {}".format(str(bus), travelled))
         distance = int(input("Drive how far? "))
 
-    t = Taxi("Prius 1", 100)
-    print(t)
-    t.drive(25)
-    print(t, t.get_fare())
-    t.start_fare()
-    t.drive(40)
-    print(t, t.get_fare())
+    Taxi_2 = Taxi("Prius 1", 100)
+    print(Taxi_2)
+    Taxi_2.drive(25)
+    print(Taxi_2, Taxi_2.get_fare())
+    Taxi_2.start_fare()
+    Taxi_2.drive(40)
+    print(Taxi_2, Taxi_2.get_fare())
 
-    sst = SilverServiceTaxi("Limo", 100, 2)
-    print(sst, sst.get_fare())
-    sst.drive(10)
-    print(sst, sst.get_fare())
+    SilverTaxi = SilverServiceTaxi("Limo", 100, 2)
+    print(SilverTaxi, SilverTaxi.get_fare())
+    SilverTaxi.drive(10)
+    print(SilverTaxi, SilverTaxi.get_fare())
 
 
 main()
