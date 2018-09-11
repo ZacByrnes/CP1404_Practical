@@ -1,11 +1,7 @@
-"""
-CP1404/CP5632 Practical - Suggested Solution
-Programming Language class with tests.
-"""
 # Return the self values
 
 class ProgrammingLanguage:
-    # Defining init
+
     def __init__(self, name, typing, boolean, year):
         self.name = name
         self.typing = typing

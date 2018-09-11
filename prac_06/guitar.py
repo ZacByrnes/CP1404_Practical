@@ -1,5 +1,7 @@
 from prac_06.guitars import Guitar
 
+#REFER TO PRAC 2
+
 def main():
     guitars = []
     print("My guitars!")
