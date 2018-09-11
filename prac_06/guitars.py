@@ -3,15 +3,6 @@ VINTAGE_AGE = 50
 
 
 class Guitar:
-    def main():
-        name = input("Enter Name: ")
-        # Always Error Check
-        while name != "":
-            year = int(input("Year: "))
-            cost = float(input("Cost: $"))
-            print("My guitar: {}, first made in {} costed ${}".format(name, year, cost))
-        else:
-            print("Error: Name must not be blank. ")
 
     def __init__(self, name, year=0, cost=0):
         self.name = name
@@ -30,4 +21,3 @@ class Guitar:
     def __lt(self, other):
         return self.year < other.year
 
-    main()
